@@ -1,0 +1,8 @@
+{application, ssl_cowboy, [
+	{description, "New project"},
+	{vsn, "0.0.1"},
+	{modules, ['echo_handler','key_value_gen','node_handler','request','ssl_cowboy_app','ssl_cowboy_sup']},
+	{registered, [ssl_cowboy_sup]},
+	{applications, [kernel,stdlib,cowboy,asn1,public_key,ssl]},
+	{mod, {ssl_cowboy_app, []}}
+]}.
